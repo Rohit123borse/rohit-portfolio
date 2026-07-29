@@ -6,10 +6,11 @@ A polished, production-ready portfolio website for Rohit Borse, a Flutter Develo
 
 - Responsive one-page portfolio experience
 - Premium glassmorphism UI with motion-rich interactions
-- Sections for hero, about, skills, experience, projects, contact, and footer
-- SEO metadata and social sharing support
-- Accessible navigation and keyboard-friendly interactions
-- Optimized images and performant animations
+- Hero, About, Skills, Experience, Projects, Contact and Footer sections
+- SEO optimized
+- Accessible navigation
+- Smooth animations with Framer Motion
+- Dark/Light theme support
 
 ## Tech Stack
 
@@ -24,12 +25,14 @@ A polished, production-ready portfolio website for Rohit Borse, a Flutter Develo
 ## Project Structure
 
 ```text
-app/                # App router pages, metadata, and global assets
-components/         # Reusable UI and section components
-constants/          # Centralized content data
-lib/                # Shared utilities and site content
-sections/           # Page sections such as hero, projects, and contact
-public/             # Static assets including images and favicons
+app/
+components/
+constants/
+hooks/
+lib/
+public/
+sections/
+types/
 ```
 
 ## Installation
@@ -39,25 +42,21 @@ npm install
 npm run dev
 ```
 
-Open http://localhost:3000 to view the portfolio locally.
-
-## Screenshots
-
-Add screenshots here after deploying or capturing local previews.
-
-## Deployment
-
-This project is ready for deployment on Vercel.
-
-Recommended environment variables:
-
-```bash
-NEXT_PUBLIC_SITE_URL=https://your-domain.com
-```
+Open http://localhost:3000 in your browser.
 
 ## Build
 
 ```bash
 npm run lint
 npm run build
+```
+
+## Deployment
+
+Deploy on Vercel.
+
+Environment Variable:
+
+```bash
+NEXT_PUBLIC_SITE_URL=https://your-domain.com
 ```
