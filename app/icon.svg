@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Rohit Borse logo">
+  <rect width="64" height="64" rx="18" fill="#0f172a" />
+  <path d="M20 19h10.7c8.1 0 14.5 6.4 14.5 14.5S38.8 48 30.7 48H20z" fill="#38bdf8" />
+  <path d="M34 19h10.7c8.1 0 14.5 6.4 14.5 14.5S52.8 48 44.7 48H34z" fill="#a78bfa" />
+  <path d="M24 27h6.5v14H24z" fill="#fff" />
+</svg>
