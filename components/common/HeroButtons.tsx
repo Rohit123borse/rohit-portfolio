@@ -59,10 +59,11 @@ export function HeroButtons({
   secondaryHref = "#projects",
 }: HeroButtonsProps) {
   return (
-    <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+    <div className="mt-8 flex flex-wrap gap-4">
 
+      {/* Resume Button */}
       <motion.div
-        whileHover={{ y: -2, scale: 1.01 }}
+        whileHover={{ y: -3, scale: 1.02 }}
         whileTap={{ scale: 0.98 }}
       >
         <Link
@@ -72,7 +73,14 @@ export function HeroButtons({
         >
           <Button
             size="lg"
-            className="rounded-full bg-sky-600 px-6 text-white shadow-lg shadow-sky-600/20 hover:bg-sky-700"
+            className="
+              rounded-full
+              bg-blue-600
+              px-7
+              text-white
+              shadow-[0_10px_40px_rgba(37,99,235,0.35)]
+              hover:bg-blue-700
+            "
           >
             <Download size={18} />
             {heroContent.ctas.primary}
@@ -81,15 +89,24 @@ export function HeroButtons({
       </motion.div>
 
 
+      {/* Project Button */}
       <motion.div
-        whileHover={{ y: -2, scale: 1.01 }}
+        whileHover={{ y: -3, scale: 1.02 }}
         whileTap={{ scale: 0.98 }}
       >
         <Link href={secondaryHref}>
           <Button
-            variant="outline"
             size="lg"
-            className="rounded-full border-zinc-300 bg-white/80 px-6 text-zinc-800 hover:bg-white dark:border-zinc-700 dark:bg-zinc-900/70 dark:text-zinc-100"
+            variant="outline"
+            className="
+              rounded-full
+              border-white/15
+              bg-white/5
+              px-7
+              text-white
+              backdrop-blur-xl
+              hover:bg-white/10
+            "
           >
             {heroContent.ctas.secondary}
             <ArrowRight size={18} />

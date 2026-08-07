@@ -6,10 +6,8 @@ import { ArrowUpRight } from "lucide-react";
 
 import { MobileMenu } from "@/components/common/MobileMenu";
 import { NavItem } from "@/components/common/NavItem";
-import { ThemeToggle } from "@/components/common/ThemeToggle";
 import { navigationItems } from "@/constants/navigation";
 import { siteContent } from "@/lib/site-data";
-import { Button } from "@/components/ui/button";
 import { useScroll } from "@/hooks/use-scroll";
 
 export function Navbar() {
@@ -19,46 +17,140 @@ export function Navbar() {
     <motion.header
       initial={false}
       animate={{
-        backgroundColor: isScrolled ? "rgba(255,255,255,0.72)" : "rgba(255,255,255,0)",
-        boxShadow: isScrolled ? "0 10px 40px rgba(15, 23, 42, 0.08)" : "0 0 0 rgba(15, 23, 42, 0)",
-        borderColor: isScrolled ? "rgba(228, 228, 231, 0.8)" : "rgba(255,255,255,0)",
+        backgroundColor: isScrolled
+          ? "rgba(5,9,18,0.82)"
+          : "rgba(5,9,18,0)",
+        boxShadow: isScrolled
+          ? "0 10px 40px rgba(0,0,0,0.18)"
+          : "0 0 0 rgba(0,0,0,0)",
+        borderColor: isScrolled
+          ? "rgba(255,255,255,0.06)"
+          : "rgba(255,255,255,0)",
       }}
-      transition={{ duration: 0.25, ease: "easeOut" }}
-      className="sticky top-0 z-50 border-b border-transparent backdrop-blur-xl dark:border-zinc-800/70 dark:[background-color:rgba(9,9,11,0.6)]"
+      transition={{
+        duration: 0.25,
+        ease: "easeOut",
+      }}
+      className="
+        sticky
+        top-0
+        z-50
+        border-b
+        border-transparent
+        backdrop-blur-xl
+      "
     >
-      <div className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-4 sm:px-8 lg:px-12">
-        <Link href="#home" className="flex items-center gap-2 text-sm font-semibold tracking-[0.24em] text-zinc-900 uppercase dark:text-zinc-100">
-          <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-sky-600 text-sm font-bold text-white">
+      <div
+        className="
+          mx-auto
+          flex
+          h-[88px]
+          w-full
+          max-w-6xl
+          items-center
+          justify-between
+          px-6
+          lg:px-8
+        "
+      >
+        {/* Logo */}
+        <Link
+          href="/"
+          className="
+            flex
+            shrink-0
+            items-center
+            gap-3
+            text-white
+          "
+        >
+          <div
+            className="
+              flex
+              h-10
+              w-10
+              items-center
+              justify-center
+              rounded-xl
+              bg-blue-600
+              text-base
+              font-bold
+              text-white
+              shadow-lg
+              shadow-blue-600/25
+            "
+          >
             {siteContent.name.charAt(0)}
+          </div>
+
+          <span
+            className="
+              whitespace-nowrap
+              text-lg
+              font-semibold
+              tracking-tight
+            "
+          >
+            {siteContent.name}
           </span>
-          <span>{siteContent.name}</span>
         </Link>
 
-        <nav className="hidden items-center gap-2 md:flex" aria-label="Primary navigation">
+        {/* Desktop Navigation */}
+        <nav className="hidden md:flex">
           <ul className="flex items-center gap-1">
-            {navigationItems.map((item) => {
-              const sectionId = item.href.replace("#", "");
-              return (
-                <NavItem
-                  key={item.href}
-                  label={item.label}
-                  href={item.href}
-                  active={activeSection === sectionId}
-                />
-              );
-            })}
+            {navigationItems
+              .filter((item) => item.label !== "Home")
+              .map((item) => {
+                const sectionId = item.href.replace("#", "");
+
+                return (
+                  <NavItem
+                    key={item.href}
+                    label={item.label}
+                    href={item.href}
+                    active={activeSection === sectionId}
+                  />
+                );
+              })}
           </ul>
         </nav>
 
-        <div className="flex items-center gap-2">
-          <ThemeToggle />
-          <Link href={siteContent.resumeUrl} target="_blank" rel="noreferrer" className="hidden sm:flex">
-            <Button size="sm" className="rounded-full bg-sky-600 px-4 text-white hover:bg-sky-700">
-              Resume
-              <ArrowUpRight className="ml-1 h-4 w-4" />
-            </Button>
+        {/* Right Actions */}
+        <div className="flex items-center gap-3">
+          {/* Hire Me */}
+          <Link
+            href="#contact"
+            className="
+              hidden
+              items-center
+              gap-1.5
+              rounded-lg
+              border
+              border-blue-500/40
+              bg-blue-500/[0.04]
+              px-5
+              py-2.5
+              text-sm
+              font-semibold
+              text-blue-400
+              transition-all
+              duration-200
+              hover:border-blue-400/70
+              hover:bg-blue-500/10
+              hover:text-blue-300
+              sm:flex
+            "
+          >
+            Hire Me
+
+            <ArrowUpRight className="h-4 w-4" />
           </Link>
-          <MobileMenu items={navigationItems} activeSection={activeSection} />
+
+          {/* Mobile Menu */}
+          <MobileMenu
+            items={navigationItems}
+            activeSection={activeSection}
+          />
         </div>
       </div>
     </motion.header>

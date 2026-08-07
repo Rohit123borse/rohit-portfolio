@@ -7,3 +7,12 @@ export const navigationItems = [
   { label: "Certifications", href: "#certifications" },
   { label: "Contact", href: "#contact" },
 ];
+
+
+// export const navigationItems = [
+//   { label: "About", href: "#about" },
+//   { label: "Projects", href: "#projects" },
+//   { label: "Skills", href: "#skills" },
+//   { label: "Journey", href: "#experience" },
+//   { label: "Contact", href: "#contact" },
+// ];

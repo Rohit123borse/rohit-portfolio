@@ -12,20 +12,52 @@ type NavItemProps = {
   onClick?: () => void;
 };
 
-export function NavItem({ label, href, active = false, onClick }: NavItemProps) {
+export function NavItem({
+  label,
+  href,
+  active = false,
+  onClick,
+}: NavItemProps) {
   return (
-    <motion.li whileHover={{ y: -2, scale: 1.01 }} transition={{ type: "spring", stiffness: 300, damping: 20 }}>
+    <motion.li
+      whileHover={{
+        y: -2,
+      }}
+      transition={{
+        type: "spring",
+        stiffness: 300,
+        damping: 20,
+      }}
+    >
       <Link
         href={href}
         onClick={onClick}
         className={cn(
-          "relative rounded-full px-3 py-2 text-sm font-medium transition-colors duration-200",
+          `
+          relative
+          rounded-full
+          px-4
+          py-2
+          text-sm
+          font-medium
+          transition-all
+          duration-200
+          `,
+          
           active
-            ? "text-sky-600 dark:text-sky-400"
-            : "text-zinc-700 hover:text-zinc-950 dark:text-zinc-300 dark:hover:text-white"
+            ? `
+              text-blue-400
+              bg-blue-500/10
+              shadow-[0_0_20px_rgba(59,130,246,0.15)]
+            `
+            : `
+              text-zinc-400
+              hover:text-white
+              hover:bg-white/5
+            `
         )}
       >
-        <span>{label}</span>
+        {label}
       </Link>
     </motion.li>
   );
