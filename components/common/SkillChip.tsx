@@ -9,9 +9,15 @@ type SkillChipProps = {
 export function SkillChip({ label }: SkillChipProps) {
   return (
     <motion.span
-      whileHover={{ y: -2, scale: 1.02 }}
-      transition={{ type: "spring", stiffness: 260, damping: 20 }}
-      className="rounded-full border border-sky-500/20 bg-sky-500/10 px-3 py-1.5 text-sm font-medium text-sky-700 shadow-sm backdrop-blur dark:border-sky-400/20 dark:bg-sky-400/10 dark:text-sky-300"
+      whileHover={{
+        y: -2,
+      }}
+      transition={{
+        type: "spring",
+        stiffness: 260,
+        damping: 20,
+      }}
+      className="inline-flex items-center rounded-lg border border-white/[0.08] bg-white/[0.02] px-4 py-2 text-[13px] font-medium text-slate-300 transition-colors duration-200 hover:border-blue-500/30 hover:bg-blue-500/[0.05] hover:text-blue-300"
     >
       {label}
     </motion.span>

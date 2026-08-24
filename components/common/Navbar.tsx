@@ -41,18 +41,17 @@ export function Navbar() {
       "
     >
       <div
-        className="
-          mx-auto
-          flex
-          h-[88px]
-          w-full
-          max-w-6xl
-          items-center
-          justify-between
-          px-6
-          lg:px-8
-        "
-      >
+  className="
+    mx-auto
+    flex
+    h-[88px]
+    w-full
+    max-w-[1320px]
+    items-center
+    px-6
+    lg:px-8
+  "
+>
         {/* Logo */}
         <Link
           href="/"
@@ -96,7 +95,7 @@ export function Navbar() {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex">
+       <nav className="ml-auto mr-10 hidden md:flex lg:mr-16">
           <ul className="flex items-center gap-1">
             {navigationItems
               .filter((item) => item.label !== "Home")
