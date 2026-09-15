@@ -52,21 +52,21 @@ export const certifications: CertificationItem[] = [
 
   {
   id: "director-certificate-1",
-  title: "Your Certificate Title",
+  title: "Certificate of Excellence",
   category: "Achievement",
   organization: "R. C. Patel Institute of Management Research and Development, Shirpur",
   date: "2024",
-  description: "Recognition awarded by the college.",
+  description: "Awarded with a Certificate of Excellence for outstanding performance in a national-level competition organized by the institute.",
   image: "/certificates/hackathon.jpg",
 },
 
 {
   id: "director-certificate-2",
-  title: "Your Certificate Title",
+  title: "Certificate of Appreciation",
   category: "Recognition",
   organization: "R. C. Patel Institute of Management Research and Development, Shirpur",
   date: "2024",
-  description: "Recognition awarded by the college.",
+  description: "Awarded with a Certificate of Appreciation for exceptional contributions to the institute.",
   image: "/certificates/achievement_librarymam.jpeg",
 },
 ];

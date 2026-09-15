@@ -63,7 +63,7 @@ export function Hero() {
     backgroundClip: "text",
   }}
 >
-  App Developer.
+  MERN Stack Developer.
 </h2>
 
             {/* Third Line */}
@@ -73,10 +73,7 @@ export function Hero() {
 
             {/* Description */}
             <p className="mt-7 max-w-[600px] text-[15px] leading-6 text-slate-400 xl:text-[16px]">
-              I build modern cross-platform mobile applications using
-              Flutter, Dart, Firebase, REST APIs, and scalable app
-              architectures. Focused on clean UI, reliable API integration,
-              and real-world applications.
+             Mobile & Full-Stack Developer specializing in Flutter and MERN Stack. Skilled in building modern web & mobile applications using Flutter, React, Node.js, Express.js, MongoDB, Firebase, and REST APIs. Passionate about creating clean, scalable, and real-world software solutions.
             </p>
 
             {/* Buttons */}

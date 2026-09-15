@@ -38,10 +38,10 @@ export function Certifications() {
               Certifications &amp; Achievements
             </h2>
 
-            <p className="mt-4 max-w-[560px] text-[16px] leading-[1.7] text-slate-600">
-              Recognition earned through innovation, technical competitions,
-              and hands-on problem solving.
-            </p>
+           <p className="max-w-[600px] text-[15px] leading-7 text-slate-600 sm:text-base">
+  A collection of certifications, achievements, and milestones that reflect
+  my continuous learning and technical growth.
+</p>
           </motion.div>
 
           {/* Featured Achievement */}
