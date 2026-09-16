@@ -1,7 +1,7 @@
 export function ImpactStats() {
   const stats = [
     {
-      value: "3+",
+      value: "1+",
       title: "Production Apps",
       subtitle: "Shipped to real users",
     },
@@ -11,7 +11,7 @@ export function ImpactStats() {
       subtitle: "Text + Voice support",
     },
     {
-      value: "3",
+      value: "2",
       title: "Cloud Deployments",
       subtitle: "Live on Render",
     },

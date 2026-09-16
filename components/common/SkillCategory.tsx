@@ -47,11 +47,18 @@ export function SkillCategory({
         aria-label={`${category.title} technologies`}
       >
         {category.skills.map((skill) => (
-          <SkillChip
-            key={skill}
-            label={skill}
-          />
-        ))}
+ <SkillChip
+  key={skill}
+  label={skill}
+  variant={
+    category.id === "state-management" ||
+    category.id === "frontend" ||
+     category.id === "development-concepts"
+      ? "purple"
+      : "default"
+  }
+/>
+))}
       </div>
     </motion.article>
   );

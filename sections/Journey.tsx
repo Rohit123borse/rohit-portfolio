@@ -3,8 +3,35 @@
 import { motion } from "framer-motion";
 
 const journey = [
-  {
+
+    {
     id: 1,
+    role: "MERN Stack Developer Intern",
+    company: "Cognevance Technologies",
+    type: "Internship",
+    date: "Sep 2026 — Present",
+    description:
+      "Working on industry-oriented web application projects using MongoDB, Express.js, React.js, and Node.js. Gaining hands-on experience in REST APIs, authentication, CRUD operations, database integration, deployment, and full-stack development.",
+    skills: [
+      "MongoDB",
+      "Express.js",
+      "React.js",
+      "Node.js",
+      "REST API",
+      "JWT",
+      "bcrypt",
+      "CRUD",
+      "Git",
+      "GitHub",
+      "Postman",
+      "Vercel",
+      "Netlify",
+    ],
+  },
+
+
+  {
+    id: 2,
     role: "Flutter Developer Intern",
     company: "Octverse Technologies Pvt. Ltd",
     type: "Internship",
@@ -27,7 +54,7 @@ const journey = [
   },
 
   {
-    id: 2,
+    id: 3,
     role: "Master of Computer Applications (MCA)",
     company: "Sandeep Institute of Technology and Research Center",
     type: "Education · 9.00 GPA",
@@ -44,7 +71,7 @@ const journey = [
   },
 
   {
-    id: 3,
+    id: 4,
     role: "Bachelor of Computer Applications (BCA)",
     company: "R. C. Patel Institute, Shirpur",
     type: "Education · 9.29 GPA",
